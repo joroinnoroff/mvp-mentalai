@@ -4,11 +4,8 @@ import { motion } from "framer-motion";
  
 
 export default function About() {
-  const [isShowing, setIsShowing] = useState(false);
-
-  const handleButtonClick = () => {
-    setIsShowing(true);
-  };
+ 
+ 
 
   const transition = { duration: 0.8, ease: "easeInOut" }; // Adjust the duration as needed
 

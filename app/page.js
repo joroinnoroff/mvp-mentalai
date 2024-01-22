@@ -78,7 +78,7 @@ export default function Home() {
                   <span className="font-bold">sympathetic</span> ear or seeking{" "}
                   <span className="font-bold">guidance</span>, Mental AI is your
                   confidential companion on the journey to mental wellness. But we
-                  don't stop there. Recognizing the value of{" "}
+                  don&apos;t stop there. Recognizing the value of{" "}
                   <span className="font-bold">human connection</span>, we also offer
                   personalized suggestions for real-life therapists who can provide
                   expert support. Mental AI is committed to empowering you on your
