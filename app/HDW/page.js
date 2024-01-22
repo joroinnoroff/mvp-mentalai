@@ -33,7 +33,7 @@ export default function HDW() {
               animate={{ x: 0, opacity: 1 }}
               transition={transition}
             >
-            Mental AI operates on the cutting edge of mental health support, driven by the powerful capabilities of the OpenAI API. Our platform is designed to provide you with a unique and personalized experience, centered around the idea that everyone deserves a space to express what's on their mind.
+            Mental AI operates on the cutting edge of mental health support, driven by the powerful capabilities of the OpenAI API. Our platform is designed to provide you with a unique and personalized experience, centered around the idea that everyone deserves a space to express what&apos;s on their mind.
             </motion.p>
 
             <motion.small
@@ -58,7 +58,7 @@ export default function HDW() {
               </ul>
 
               <h2 className="mt-10">
-              At Mental AI, we believe in the harmonious blend of technology and empathy. Join us on this transformative journey where asking what's on your mind becomes a catalyst for positive change, leading you to a path of mental wellness and empowerment.
+              At Mental AI, we believe in the harmonious blend of technology and empathy. Join us on this transformative journey where asking what&apos;s on your mind becomes a catalyst for positive change, leading you to a path of mental wellness and empowerment.
               </h2>
             </motion.small>
           </div>

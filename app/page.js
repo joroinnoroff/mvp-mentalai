@@ -13,7 +13,7 @@ export default function Home() {
     // Simulating a delay to represent the loading process
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Adjust the duration as needed
+    }, 1500); // Adjust the duration as needed
 
     // Clear the timeout when the component unmounts
     return () => clearTimeout(timeout);
@@ -74,7 +74,7 @@ export default function Home() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={transition}
                 >
-                  Whether you're looking for a{" "}
+                  Whether you&apos;re looking for a{" "}
                   <span className="font-bold">sympathetic</span> ear or seeking{" "}
                   <span className="font-bold">guidance</span>, Mental AI is your
                   confidential companion on the journey to mental wellness. But we
@@ -93,7 +93,7 @@ export default function Home() {
                 transition={transition}
                 onClick={handleButtonClick}
               >
-                Start Asking What's on your mind <Heart />
+                Start Asking What&apos;s on your mind <Heart />
               </motion.button>
             </div>
           )}

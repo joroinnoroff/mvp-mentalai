@@ -48,11 +48,11 @@ export default function About() {
             >
              Welcome to Mental AI, your dedicated ally on the path to mental well-being. At Mental AI, we understand the importance of fostering a safe and compassionate space for individuals to express their thoughts and emotions. Our innovative AI technology is designed to be your listening companion, providing a non-judgmental environment for you to share your innermost thoughts.
 
-We believe in the power of human connection, and that's why Mental AI goes beyond traditional solutions. Whether you're seeking a sympathetic ear or guidance, our confidential AI companion is here to support you on your journey to mental wellness.
+We believe in the power of human connection, and that&apos;s why Mental AI goes beyond traditional solutions. Whether you&apos;re seeking a sympathetic ear or guidance, our confidential AI companion is here to support you on your journey to mental wellness.
 
-But our commitment doesn't end there. Recognizing the value of connecting with real-life therapists, Mental AI also offers personalized suggestions for expert support. We blend cutting-edge technology with a human touch, empowering you to take control of your mental health journey.
+But our commitment doesn&apos;t end there. Recognizing the value of connecting with real-life therapists, Mental AI also offers personalized suggestions for expert support. We blend cutting-edge technology with a human touch, empowering you to take control of your mental health journey.
 
-Take the first step towards a healthier mind with Mental AI. Your well-being matters, and we are here to accompany and guide you every step of the way. Together, let's explore the possibilities and embrace a future where technology and compassion seamlessly come together for your mental wellness.
+Take the first step towards a healthier mind with Mental AI. Your well-being matters, and we are here to accompany and guide you every step of the way. Together, let&apos;s explore the possibilities and embrace a future where technology and compassion seamlessly come together for your mental wellness.
             </motion.small>
           </div>
      
