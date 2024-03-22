@@ -8,7 +8,7 @@ export default function Navbar() {
  
 
   return (
-<div className="w-screen p-1 md:p-10 flex items-center justify-between">
+<div className="w-screen p-5 md:p-10 flex items-center justify-between">
  <div className="flex items-center">
   <Link href={"/"}>
     <Lottie animationData={logoAni} width={20} height={20} style={{height: "100px", width: "auto", overflow: "auto"}}/>
