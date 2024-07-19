@@ -5,6 +5,8 @@ import Ai from "./components/Ai";
 import { Heart } from "lucide-react";
 import heart from '../app/Animations/heart.json'
 import Lottie from "lottie-react";
+import Box from '../public/box.png'
+import Image from 'next/image'
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isShowing, setIsShowing] = useState(false);
@@ -29,7 +31,7 @@ export default function Home() {
     <div className="h-screen text-center">
       {isLoading ? (
         <div className="animate-pulse">
-          <h1 className="text-4xl">LOVE YOURSELF</h1>
+     
           <Lottie animationData={heart} style={{height: "400px"}}/>
         </div>
       ) : (
@@ -87,16 +89,18 @@ export default function Home() {
                 </motion.small>
               </div>
               <motion.button
-                className="border p-2 rounded-md mt-5 hover:scale-105 transition-all flex items-center justify-center m-auto gap-2"
+                className=" p-2 rounded-md mt-5 hover:scale-105 transition-all flex items-center justify-center m-auto gap-2 font-extralight"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={transition}
                 onClick={handleButtonClick}
               >
-                Start Asking What&apos;s on your mind <Heart />
+                  Click here to start conversation
+              <Image src={Box} alt="Image by user15245033 on Freepik" width={150} height={150}/>
               </motion.button>
             </div>
           )}
+ 
         </div>
       )}
     </div>
