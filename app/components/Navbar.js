@@ -18,12 +18,8 @@ export default function Navbar() {
 
     
  <div className="flex gap-2 md:gap-10 text-center">
-  <Link href="/About" className="hover:text-gray-600 hover:scale-105 transition-all text-sm md:text-lg">
-    About Us
-  </Link>
-  <Link href="/HDW" className="hover:text-gray-600 hover:scale-105 transition-all text-sm md:text-lg">
-    How Does this work?
-  </Link>
+ 
+ 
 
   <Link href="/SR" className="hover:text-gray-600 hover:scale-105 transition-all text-sm md:text-lg">
     Someone real ?
