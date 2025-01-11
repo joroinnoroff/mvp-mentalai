@@ -43,7 +43,13 @@ const chatCompletion = await openai.chat.completions.create({
   Mental AI
 </div>
 <p className="text-gray-600 text-lg">Get the answers your looking for here!</p>
-<p className="text-gray-600 text-sm">Everything here is confidential and is not shared with anyone.</p>
+<p className="text-gray-600 text-sm">
+While our platform strives to provide a secure and private experience,
+      please note that conversations are powered by OpenAI&apos;s API. OpenAI
+      employs strong privacy safeguards, and data is not used to improve their
+      models unless explicitly opted in. However, as with any digital service,
+      absolute confidentiality cannot be guaranteed.
+</p>
 <small>
 Welcome to your safe-space
 </small>
