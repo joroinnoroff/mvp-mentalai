@@ -46,48 +46,52 @@ export default function Home() {
             </motion.div>
           ) : (
             <div className="p-10">
-              <motion.h1
-                className="text-lg md:text-4xl font-bold"
-                id="Left"
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={transition}
-              >
-                Welcome to Mental AI, your digital ally for mental well-being.
-              </motion.h1>
-              <div className="mt-3">
-                <motion.p
-                  className="md:w-3/4 m-auto text-lg font-thin"
-                  id="Left"
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={transition}
-                >
-                  We understand the importance of having a safe space to express
-                  your thoughts and emotions. Our innovative AI is here to listen,
-                  providing a judgment-free zone for you to share whatever is on
-                  your mind.
-                </motion.p>
+  <motion.h1
+    className="text-lg md:text-4xl font-bold"
+    id="Left"
+    initial={{ x: -100, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={transition}
+  >
+    Welcome to Mental AI, your digital ally for mental well-being.
+  </motion.h1>
+  <div className="mt-3">
+    <motion.p
+      className="md:w-3/4 m-auto text-lg font-thin"
+      id="Left"
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={transition}
+    >
+      We understand the importance of having a safe space to express your
+      thoughts and emotions. Our innovative AI is here to listen, providing a
+      judgment-free zone for you to share whatever is on your mind.
+    </motion.p>
 
-                <motion.small
-                  className="md:w-3/5 md:inline-block mt-5 text-lg"
-                  id="Right"
-                  initial={{ x: 100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={transition}
-                >
-                  Whether you&apos;re looking for a{" "}
-                  <span className="font-bold">sympathetic</span> ear or seeking{" "}
-                  <span className="font-bold">guidance</span>, Mental AI is your
-                  confidential companion on the journey to mental wellness. But we
-                  don&apos;t stop there. Recognizing the value of{" "}
-                  <span className="font-bold">human connection</span>, we also offer
-                  personalized suggestions for real-life therapists who can provide
-                  expert support. Mental AI is committed to empowering you on your
-                  path to <span className="font-bold">mental health</span>, offering a
-                  seamless blend of technology and human touch.
-                </motion.small>
-              </div>
+    <motion.small
+      className="md:w-3/5 md:inline-block mt-5 text-lg"
+      id="Right"
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={transition}
+    >
+      Whether you&apos;re looking for a{" "}
+      <span className="font-bold">sympathetic</span> ear or seeking{" "}
+      <span className="font-bold">guidance</span>, Mental AI is your
+      confidential companion on the journey to mental wellness. In addition, we
+      offer personalized suggestions for licensed therapists who can provide
+      expert support, bridging technology and human connection.
+      <br />
+      <br />
+      While our platform strives to provide a secure and private experience,
+      please note that conversations are powered by OpenAI&apos;s API. OpenAI
+      employs strong privacy safeguards, and data is not used to improve their
+      models unless explicitly opted in. However, as with any digital service,
+      absolute confidentiality cannot be guaranteed.
+    </motion.small>
+  </div>
+ 
+
               <motion.button
                 className=" p-2 rounded-md mt-5 hover:scale-105 transition-all flex items-center justify-center m-auto gap-2 font-extralight"
                 initial={{ opacity: 0 }}
