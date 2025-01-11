@@ -83,11 +83,13 @@ export default function Home() {
       expert support, bridging technology and human connection.
       <br />
       <br />
-      While our platform strives to provide a secure and private experience,
-      please note that conversations are powered by OpenAI&apos;s API. OpenAI
-      employs strong privacy safeguards, and data is not used to improve their
-      models unless explicitly opted in. However, as with any digital service,
-      absolute confidentiality cannot be guaranteed.
+      - <span className="italic font-extrabold">
+        While our platform strives to provide a secure and private experience,
+        please note that conversations are powered by OpenAI&apos;s API. OpenAI
+        employs strong privacy safeguards, and data is not used to improve their
+        models unless explicitly opted in. However, as with any digital service,
+        absolute confidentiality cannot be guaranteed.
+      </span>
     </motion.small>
   </div>
  
