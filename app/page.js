@@ -56,17 +56,7 @@ export default function Home() {
     Welcome to Mental AI, your digital ally for mental well-being.
   </motion.h1>
   <div className="mt-3">
-    <motion.p
-      className="md:w-3/4 m-auto text-lg font-thin"
-      id="Left"
-      initial={{ x: -100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={transition}
-    >
-      We understand the importance of having a safe space to express your
-      thoughts and emotions. Our innovative AI is here to listen, providing a
-      judgment-free zone for you to share whatever is on your mind.
-    </motion.p>
+ 
 
     <motion.small
       className="md:w-3/5 md:inline-block mt-5 text-lg"
