@@ -3,9 +3,6 @@ import React, {useState} from "react";
 import OpenAI from "openai";
 import { SendIcon } from "lucide-react";
 
- 
- 
-
 
  
 export default function Ai() {
@@ -13,18 +10,16 @@ const [userInput, setUserInput] = useState('');
 const [chatHistory, setChatHistory] = useState([]);
 const [isLoading, setIsLoading] = useState(false);
 
- 
-
-
- 
 const handleUserInput = async () => {
-  if (!userInput.trim()) return; // Unngå å sende tomme meldinger
-
+  if (!userInput.trim()) return;
   setIsLoading(true);
+  
   setChatHistory((prevChat) => [
     ...prevChat,
     { role: "user", content: userInput },
   ]);
+
+  await new Promise((resolve) => setTimeout(resolve, 500)); // 500ms pause
 
   try {
     const response = await fetch("/api/chat", {
@@ -49,6 +44,8 @@ const handleUserInput = async () => {
   }
 };
 
+
+ 
 
   return (
 <div className="mt-10 flex flex-col justify-center items-center">
