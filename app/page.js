@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Ai from "./components/Ai";
-import { Heart } from "lucide-react";
+import { Heart, XIcon } from "lucide-react";
 import heart from '../app/Animations/heart.json'
 import Lottie from "lottie-react";
 import Box from '../public/box.png'
@@ -42,6 +42,9 @@ export default function Home() {
               transition={transition}
               initial={{ x: 0, opacity: 0 }}
             >
+                <div className="close absolute top-52 right-10 lg:right-40 xl:right-80 border rounded-full cursor-pointer p-2" onClick={() => setIsShowing(false)}>
+                  <XIcon/>
+                </div>
               <Ai />
             </motion.div>
           ) : (

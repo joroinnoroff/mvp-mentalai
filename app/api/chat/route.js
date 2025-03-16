@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
 export async function POST(req) {
+  const apiKey = process.env.OPENAI_KEY;
+
   try {
     console.log("ENV CHECK: OPENAI_KEY:", process.env.OPENAI_KEY ? "EXISTS" : "NOT FOUND");
 
@@ -24,7 +26,7 @@ export async function POST(req) {
     }
 
     const openai = new OpenAI({
-      apiKey: process.env.OPENAI_KEY,
+      apiKey: apiKey,
     });
 
     const chatCompletion = await openai.chat.completions.create({

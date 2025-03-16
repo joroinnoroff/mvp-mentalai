@@ -1,7 +1,7 @@
 "use client"
 import React, {useState} from "react";
 import OpenAI from "openai";
-import { SendIcon } from "lucide-react";
+import { SendIcon, XIcon } from "lucide-react";
 
 
  
@@ -49,24 +49,19 @@ const handleUserInput = async () => {
 
   return (
 <div className="mt-10 flex flex-col justify-center items-center">
+  
+ 
 <div className="w-full max-w-screen-md mg-white p-4 rounded-lg shadow-md">
 <div className="mb-32">
 <div className="text-4xl font-bold text-blue-800 ">
   Mental AI
 </div>
-<p className="text-gray-600 text-lg">Get the answers your looking for here!</p>
-<p className="text-gray-600 text-sm">
-While our platform strives to provide a secure and private experience,
-      please note that conversations are powered by OpenAI&apos;s API. OpenAI
-      employs strong privacy safeguards, and data is not used to improve their
-      models unless explicitly opted in. However, as with any digital service,
-      absolute confidentiality cannot be guaranteed.
-</p>
+ 
 <small>
 Welcome to your safe-space
 </small>
 </div>
-<div className="" style={{ height: "400px", overflow: "auto"}}>
+<div className="h-[400px] lg:h-[550px] overflow-auto">
     {chatHistory.map((message, index) => (
       <div 
       key={index}
@@ -83,14 +78,24 @@ Welcome to your safe-space
       </div>
     ))}
   </div>
-  <div className="flex">
-      <input 
-      type="text"
-      placeholder="Ask me Anything"
-      value={userInput}
-      onChange={(e) => setUserInput(e.target.value)}
-      className="flex-1 p-2 rounded-1-lg"
-      />
+  <div className="flex ">
+  {isLoading ? (
+    <div>
+      ...
+    </div>
+  ) : (
+ 
+    <input
+  type="text"
+  placeholder="Ask me Anything"
+  value={userInput}
+  onChange={(e) => setUserInput(e.target.value)}
+  onKeyDown={(e) => e.key === "Enter" && handleUserInput()}
+  className="flex-1 p-2 rounded-l-lg outline-none border"
+/>
+ 
+  )}
+
       {isLoading ? (
         <div className="bg-blue-500 text-white p-2 rounded-r-lg animate-pulse">
           loading...
@@ -98,7 +103,7 @@ Welcome to your safe-space
       ) : (
         <button
         onClick={handleUserInput}
-        className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 flex items-center"
+        className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-600 flex items-center"
         >
           ask <SendIcon />
         </button>
