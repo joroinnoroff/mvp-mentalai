@@ -3,37 +3,52 @@ import React, {useState} from "react";
 import OpenAI from "openai";
 import { SendIcon } from "lucide-react";
 
+ 
+ 
 
-const openai = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true,
 
-})
+ 
 export default function Ai() {
 const [userInput, setUserInput] = useState('');
 const [chatHistory, setChatHistory] = useState([]);
 const [isLoading, setIsLoading] = useState(false);
 
+ 
+
+
+ 
 const handleUserInput = async () => {
-setIsLoading (true);
-setChatHistory ((prevChat) => [
-...prevChat,
-{role: 'user', content: userInput},
-]);
+  if (!userInput.trim()) return; // Unngå å sende tomme meldinger
 
-
-const chatCompletion = await openai.chat.completions.create({
-  messages: [... chatHistory, {role: 'assistant', content: userInput}],
-  model: 'gpt-3.5-turbo',
-  });
-  
-  setChatHistory ((prevChat) => [
-  ...prevChat,
-  {role: 'assistant', content: chatCompletion.choices[0].message.content},
+  setIsLoading(true);
+  setChatHistory((prevChat) => [
+    ...prevChat,
+    { role: "user", content: userInput },
   ]);
-  setUserInput('');
-  setIsLoading(false);
-}
+
+  try {
+    const response = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages: [...chatHistory, { role: "user", content: userInput }] }),
+    });
+
+    const data = await response.json();
+
+    if (data.error) throw new Error(data.error);
+
+    setChatHistory((prevChat) => [
+      ...prevChat,
+      { role: "assistant", content: data.content },
+    ]);
+  } catch (error) {
+    console.error("Error fetching response:", error);
+  } finally {
+    setUserInput("");
+    setIsLoading(false);
+  }
+};
+
 
   return (
 <div className="mt-10 flex flex-col justify-center items-center">
