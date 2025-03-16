@@ -5,10 +5,7 @@ export async function POST(req) {
   try {
     console.log("ENV CHECK: OPENAI_KEY:", process.env.OPENAI_KEY ? "EXISTS" : "NOT FOUND");
 
-    if (!process.env.OPENAI_KEY) {
-      console.error("API Key missing");
-      return NextResponse.json({ error: "Missing API key" }, { status: 500 });
-    }
+  
 
     const bodyText = await req.text(); // Debugging
     console.log("Raw request body:", bodyText);
